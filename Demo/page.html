@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.js"></script>
+    
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href="style.css" rel="stylesheet">
+    <title>Demo</title>
+    
+</head>
+<body>
+   <div id="landing">
+      
+        <image id="logo" src="ADWAITS Logo.png"/>
+    
+        <h1 id="heading">Lorem ipsem dolor sit amet is dummy text,<br/> You can choose your own</h1>
+        <div id="client">
+            <p id="client_tag">Client:&nbsp;</p>
+            <p id="client_name">ABC Pvt Ltd</p>
+        </div>
+        <div id="project">
+            <p id="project_tag">Project Focus:&nbsp;</p>
+            <p id="project_name">UX Design, Visual Design and Web</p>
+        </div>
+    </div>
+  
+     <div id="container">
+        <img src="Content.png" id="text"/>
+        <img src="Laptop.jpeg" id="laptop">
+        <video id="vid">
+            <source src="Vid.mp4">
+        </video>
+    </div>
+    
+
+
+</body>
+<script type="text/javascript">
+
+$("#container").waypoint(function(){
+ setTimeout(function() {
+   
+   $("#text").animate({
+    left: '450px',
+    marginTop: '132px',
+    height: '198px',
+    width: '373px',
+    
+    
+  }, function () {$('#text').hide()});
+  
+  $('#vid').get(0).play();
+  }, 1000);
+
+  
+});
+
+</script>
+</html>
